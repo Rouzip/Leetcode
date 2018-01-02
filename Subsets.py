@@ -29,4 +29,4 @@ class Solution:
 
 if __name__ == '__main__':
     a = Solution()
-    print(a.subsets3([1, 2, 3]))
+    print(a.subsets2([1, 2, 3]))
