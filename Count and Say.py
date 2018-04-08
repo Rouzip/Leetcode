@@ -1,5 +1,6 @@
 import itertools
 
+
 def countAndSay(n):
     """
     :type n: int
@@ -7,10 +8,9 @@ def countAndSay(n):
     """
     result = '1'
     for _ in range(n - 1):
-        result = ''.join(str(len(list(num))) + digit \
-                        for digit, num in itertools.groupby(result))
+        result = ''.join(str(len(list(num))) + digit
+                         for digit, num in itertools.groupby(result))
     return result
 
 
-if __name__ == '__main__':
-	print(countAndSay(111))
+print(countAndSay(111))
