@@ -1,7 +1,9 @@
-function maxNumberExpression(numns, N, K) {
-  sum = [0, ...numns];
+function maxNumberExpression(numns: number[], N: number, K: number): number {
+  let sum: number[] = [0, ...numns];
   sum.reduce((pre, cur, index) => (sum[index] = pre + cur), 0);
-  dp = new Array(N + 1).fill(0).map(_ => new Array(K + 1).fill(0));
+  let dp: number[][] = new Array(N + 1)
+    .fill(0)
+    .map(_ => new Array(K + 1).fill(0));
   dp.map((line, index) => (line[0] = sum[index]));
   for (let i = 0; i <= N; i++) {
     dp[i][0] = sum[i];
